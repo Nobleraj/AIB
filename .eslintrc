@@ -1,1 +1,7 @@
 
+{
+   "extends": "react-app",
+   "rules": {
+      "react/no-deprecated": 0
+   }
+}
