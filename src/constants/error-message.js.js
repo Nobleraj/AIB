@@ -1,0 +1,1 @@
+export const NO_COINS_AVAILABLE = "No coins found";
