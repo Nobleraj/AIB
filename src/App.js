@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import CoinListScreen from './screens/CoinScreen';
 import CoinDetailScreen from './screens/CoinDetailScreen';
 import store from './store/store';
-import { MuiThemeProvider,unstable_createMuiStrictModeTheme as createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, unstable_createMuiStrictModeTheme as createMuiTheme } from '@material-ui/core/styles';
 import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -22,16 +22,18 @@ const theme = createMuiTheme({
 const App = () => (
   <Provider store={store}>
     <MuiThemeProvider theme={theme} >
+      <div className="app-container">
       <AppBar position="fixed">
         <Toolbar data-test="toolbar" id="toolbar">AIB</Toolbar>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={CoinListScreen} />
-            <Route path="/details" component={CoinDetailScreen} />
-          </Switch>
-        </Router>
-        </AppBar>
-        </MuiThemeProvider>
+      </AppBar>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={CoinListScreen} />
+          <Route path="/details" component={CoinDetailScreen} />
+        </Switch>
+      </Router>
+      </div>
+    </MuiThemeProvider>
   </Provider>
 )
 export default App;
