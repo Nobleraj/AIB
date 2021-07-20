@@ -39,7 +39,8 @@ export const TABLE_STYLES = {
     root: {
         width: '100%',
         padding : 10,
-        minHeight : 550
+        minHeight : 550,
+        marginTop : '60px'
     },
     container: {
         maxHeight: 520
